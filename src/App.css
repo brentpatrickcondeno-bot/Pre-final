@@ -352,6 +352,31 @@ body {
   color: #777;
 }
 
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #eee;
+}
+
+.cart-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.btn-clear {
+  background-color: #e74c3c;
+  color: white;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.8rem;
+}
+
+.btn-clear:hover {
+  background-color: #c0392b;
+}
+
 .cart-summary h3 {
   margin-bottom: 1rem;
   padding-bottom: 0.75rem;

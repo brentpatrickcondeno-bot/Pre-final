@@ -4,7 +4,7 @@ import ProductCard from '../components/ProductCard';
 import TotalBar from '../components/TotalBar';
 import CartSummary from '../components/CartSummary';
 
-function ProductList({ products, selectedCategory, onCategoryChange, cart, onAddToCart }) {
+function ProductList({ products, selectedCategory, onCategoryChange, cart, onAddToCart, onClearCart }) {
   const filteredProducts = selectedCategory === 'All'
     ? products
     : products.filter(p => p.category === selectedCategory);
@@ -47,6 +47,7 @@ function ProductList({ products, selectedCategory, onCategoryChange, cart, onAdd
             cart={cart}
             onUpdateQuantity={onAddToCart}
             onRemove={onAddToCart}
+            onClearCart={onClearCart}
           />
         </aside>
       </div>

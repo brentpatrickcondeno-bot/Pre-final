@@ -48,6 +48,10 @@ function App() {
     setProducts(prev => [...prev, productWithId]);
   };
 
+  const handleClearCart = () => {
+    setCart([]);
+  };
+
   const allCategories = ['All', ...new Set(products.map(p => p.category))];
 
   return (
@@ -65,6 +69,7 @@ function App() {
                   onCategoryChange={setSelectedCategory}
                   cart={cart}
                   onAddToCart={handleAddToCart}
+                  onClearCart={handleClearCart}
                 />
               }
             />

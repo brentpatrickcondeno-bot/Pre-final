@@ -1,4 +1,4 @@
-function CartSummary({ cart, onUpdateQuantity, onRemove }) {
+function CartSummary({ cart, onUpdateQuantity, onRemove, onClearCart }) {
   if (cart.length === 0) {
     return (
       <div className="cart-summary empty">
@@ -11,7 +11,10 @@ function CartSummary({ cart, onUpdateQuantity, onRemove }) {
 
   return (
     <div className="cart-summary">
-      <h3>Cart Summary</h3>
+      <div className="cart-header">
+        <h3>Cart Summary</h3>
+        <button onClick={onClearCart} className="btn btn-clear">Clear Cart</button>
+      </div>
       <ul className="cart-items">
         {cart.map(item => (
           <li key={item.id} className="cart-item">
